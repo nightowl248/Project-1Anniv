@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1st Anniversary Website for my Bibi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Tilt+Warp&ampdisplay=swap" rel="stylesheet">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+       
+        html,body {
+            padding: 0;
+            margin: 0;
+            background-color: #f9dcc5;
+            font-family: 'Shadows Into Light', cursive;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            color: #7b3f00;
+            letter-spacing: 3px;
+            border-width: 5px;
+            border-color: #7b3f00;
+        }
+
+        img {
+            animation: bounce 0.7s;
+            width: 500px;
+            height: 500px;
+            margin: 0;
+            padding: 0;
+        }
+        .container h1 {
+            margin: 0;
+            padding: 0;
+            margin-bottom: -50px;
+            animation: fade 0.5s;
+            margin-left: 70px;
+        }
+        button {
+            margin: 10px;
+            width: 200px;
+            height: 50px;
+            border-radius: 14px;
+            color: #7b3f00;
+            letter-spacing: 2px;
+            font-family: 'Tilt Warp', cursive;
+            border-width: 2px;
+            border-color: #7b3f00;
+            transition: background-color 1s,
+    color 1s;
+        }
+        button:hover {
+            background-color: #c1a96b;
+            border: 3px solid #7b3f00;
+            color: #7b3f00;
+            background-color: #c1a96b;
+            
+        }
+        .footer {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            
+
+        }
+        .footer h1 {
+            color: #7b3f00;
+            letter-spacing: 2px;
+            font-size: 10pt;
+            order: 1;
+            margin: 0;
+            padding: 0;
+        }
+
+        .footer p {
+            color: white;
+            font-size: 10pt;
+            font-family: monospace;
+            order: 2;
+        }
+
+        #Vmessage {
+            font-family: 'Tilt Warp', cursive;
+            visibility: hidden;
+        }
+
+        @keyframes fade {
+            0% {
+                opacity: 1;
+            }
+            50% {
+                opacity: 0.1;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+
+        @keyframes bounce {
+			0%, 20%, 50%, 80%, 100% {transform: translateY(0);} 
+            40% {transform: translateY(-30px);} 
+            60% {transform: translateY(-15px);}
+		}
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1> Bi, please open my message for you
+       ^_^</h1>
+        <img id="env" src="post-close.png" alt="">
+        <button id="open" onclick='changeImage("post.png");'>OPEN</button>
+        <button id="Vmessage" onclick='view()'>VIEW MESSAGE</button>
+    </div>
+    <div class="footer">
+        <h1>Recreated by Jayson Borbe</h1>
+    </div>
+    
+
+    <script>
+        function changeImage(a) {
+            document.getElementById("env").src=a;
+            document.getElementById("Vmessage").style.visibility="visible";
+            document.getElementById("open").style.visibility="hidden";
+            
+            
+        }
+
+        function view(){
+            window.location.href="letter.html";
+           
+        }
+
+    </script>
+    
+</body>
+</html>
